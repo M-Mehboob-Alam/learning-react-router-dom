@@ -14,9 +14,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App/>} > 
-          <Route path='/invoice' element={<Invoice/>} >
-            <Route path=':invoiceName' element={<Bills/>} />
+          <Route path='/invoice' element={<Invoice/>} >        
           </Route>
+          <Route path='/invoice/:invoiceName' element={<Bills/>} />
           <Route path='/expense' element={<Expenses/>} />
           <Route path='*' element={
             <main className='text-center'>
