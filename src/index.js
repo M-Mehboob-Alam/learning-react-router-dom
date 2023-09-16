@@ -12,11 +12,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App/>} />
-        <Route path='/invoice' element={<Invoice/>} />
-        <Route path='/expense' element={<Expenses/>} />
-      </Routes>
-     
+        <Route path='/' element={<App/>} > 
+          <Route path='/invoice' element={<Invoice/>} >
+            <Route path='/invoice/123' element={<div>Bills</div>} />
+          </Route>
+          <Route path='/expense' element={<Expenses/>} />
+        </Route>       
+      </Routes>     
     </BrowserRouter>
   </React.StrictMode>
 );
