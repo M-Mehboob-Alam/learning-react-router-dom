@@ -5,7 +5,7 @@ import App from './App';
 import Invoice from './components/invoice';
 import Expenses from './components/expense';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +17,15 @@ root.render(
             <Route path='/invoice/123' element={<div>Bills</div>} />
           </Route>
           <Route path='/expense' element={<Expenses/>} />
+          <Route path='*' element={
+            <main className='text-center'>
+              <p className='text-3xl'>
+                There is nothing/404 
+                
+              </p>
+              <Link to='/'>Go To Home</Link>
+            </main>
+          } />
         </Route>       
       </Routes>     
     </BrowserRouter>
