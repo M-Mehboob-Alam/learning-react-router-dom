@@ -6,6 +6,7 @@ import Invoice from './components/invoice';
 import Expenses from './components/expense';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Bills from './components/bill';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App/>} > 
           <Route path='/invoice' element={<Invoice/>} >
-            <Route path='/invoice/123' element={<div>Bills</div>} />
+            <Route path=':invoiceName' element={<Bills/>} />
           </Route>
           <Route path='/expense' element={<Expenses/>} />
           <Route path='*' element={

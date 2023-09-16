@@ -14,6 +14,7 @@ export default function invoice(){
                         </Link>
                     ))}
                 </div>
+                <Outlet></Outlet>
         </main>
     )
 }
