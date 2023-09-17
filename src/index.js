@@ -14,9 +14,16 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App/>} > 
-          <Route path='/invoice' element={<Invoice/>} >        
+          <Route path='/invoice' element={<Invoice/>} > 
+            <Route index 
+            element={
+              <main className='py-4 text-center'>
+                Select An Option ?
+              </main>
+            }></Route>  
+            <Route path='/invoice/:invoiceName' element={<Bills/>} />     
           </Route>
-          <Route path='/invoice/:invoiceName' element={<Bills/>} />
+          
           <Route path='/expense' element={<Expenses/>} />
           <Route path='*' element={
             <main className='text-center'>
