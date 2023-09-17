@@ -6,7 +6,7 @@ export default function Bills(){
     console.log(param);
     return (
       <main className="flex flex-col w-1/3 p-5 px-5 py-5 mx-auto mt-3 text-center border">
-            <h1>Welcome {invoice.name}!</h1>
+            <h1 className="capitalize">Welcome {invoice.name}!</h1>
             <h2>Due Amount: ${invoice.amount}</h2>
             <h2>Invoice Number: {invoice.no}</h2>
             <h2>Invoice Due Date: {invoice.due}</h2>

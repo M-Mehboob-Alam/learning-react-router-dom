@@ -17,7 +17,7 @@ export default function invoice(){
                             
                             }
                         }}
-                        className="bg-gray-200"
+                        className="capitalize bg-gray-200"
                         >
                             {invoice.name}
                         </NavLink>
